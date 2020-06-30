@@ -1,0 +1,28 @@
+footer {
+  position: relative;
+  background-color: var(--brand-color);
+  width: 100%;
+  color: var(--main-font-color-reverse);
+
+  .l-layout-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    min-height: 70px;
+  }
+
+  p {
+    margin: 0 10px 0 0;
+  }
+
+  a {
+    color: var(--link-color);
+    font-size: 12px;
+    letter-spacing: .8px;
+
+    &:hover {
+      color: var(--link-colorHAF);
+    }
+  }
+}

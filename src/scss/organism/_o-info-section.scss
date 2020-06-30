@@ -1,0 +1,41 @@
+.o-info-section {
+  position: relative;
+  text-align: center;
+  margin-top: 20px;
+  padding: 60px 0;
+  min-height: 100px;
+  background-color: var(--brand-color);
+  color: var(--main-font-color-reverse);
+  border-bottom: 1px solid var(--main-border-color);
+
+  h1 {
+    font-size: 34px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    text-align: left;
+
+    @media (min-width: 768px) {
+      font-size: 46px;
+      text-align: center;
+    }
+  }
+
+  .btn-primary {
+    width: 100%;
+    max-width: 430px;
+    background-color: var(--primary-background-reverse);
+    color: var(--primary-color-reverse);
+
+    @media (min-width: 768px) {
+      width: auto;
+      max-width: none;
+      display: flex;
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 120px 0 80px;
+  }
+}

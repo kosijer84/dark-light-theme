@@ -1,0 +1,32 @@
+.o-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+
+  @media (min-width: 768px) {
+    padding: 15px 0;
+  }
+
+  &-logo {
+    display: flex;
+    margin-top: -10px;
+  }
+
+  &-title {
+    margin: 7px 0 0 10px;
+  }
+
+  &-menu {
+    margin: 0 10px 0 auto;
+
+    a {
+      margin: 0 7px;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}

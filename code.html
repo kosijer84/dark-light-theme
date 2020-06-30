@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Read Text File</title>
+    <style>pre {
+        background: #f4f4f4;
+        border: 1px solid #ddd;
+        border-left: 3px solid #f2334c;
+        color: #666;
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+    }</style>
+</head>
+
+<body>
+<input type="file" name="inputfile"
+       id="inputfile">
+<br>
+
+<pre> <code id="output"></code></pre>
+
+<script type="text/javascript">
+    document.getElementById('inputfile')
+        .addEventListener('change', function() {
+
+            var fr=new FileReader();
+            fr.onload=function(){
+                document.getElementById('output')
+                    .textContent=fr.result;
+            }
+
+            fr.readAsText(this.files[0]);
+        })
+</script>
+</body>
+
+</html>

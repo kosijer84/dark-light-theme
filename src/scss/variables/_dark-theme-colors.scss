@@ -1,0 +1,31 @@
+.dark-theme {
+  //background colors
+  --main-background-color: #{$brandGray};
+
+  //font colors
+  --main-font-color: #{$white};
+  --main-font-color-reverse: #{$white};
+
+  //link colors
+  --link-color: #{$white};
+  --link-colorHAF: #e2e2e2; // color for HOVER, ACTIVE, FOCUS link
+
+  //border colors
+  --main-border-color: #{$white};
+
+  //switch colors
+  --switch-color: #{$white};
+
+  //scroll top link colors
+  --scroll-top: #{$white};
+
+  //brand colors
+  --brand-color: #{$brandColor};
+  --brand-link-color: #{$brandGray};
+
+  //scrollbar colors
+  --scroll-bar-background: rgba(156, 39, 176, 0.5);
+
+  //question mark colors
+  --q-mark-color: rgba(156, 39, 176, 1);
+}

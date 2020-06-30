@@ -1,0 +1,10 @@
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--link-brandTheme);
+  @include transition(opacity);
+
+  &:hover {
+    color: var(--link-brandDarkTheme);
+  }
+}

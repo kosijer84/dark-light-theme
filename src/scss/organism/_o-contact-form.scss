@@ -1,0 +1,40 @@
+form {
+  padding: 20px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.o-contact-form-frame {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  .contact-info {
+    text-align: left;
+    padding: 20px;
+
+    h3 {
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 7px;
+      letter-spacing: .7px;
+      font-weight: 400;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 130px;
+        height: 1px;
+        background: var(--gray-90);
+      }
+    }
+
+    p {
+      margin-top: 15px;
+    }
+  }
+}

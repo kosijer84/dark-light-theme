@@ -1,3 +1,5 @@
-import '../css/main.scss'
-
-const message = 'sssss'
+import '../scss/main.scss'
+import './cube'
+import './scroll-detection'
+import './switch-theme'
+import './year-footer'

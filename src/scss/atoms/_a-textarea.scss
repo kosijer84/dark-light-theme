@@ -1,0 +1,17 @@
+textarea {
+  width: 100%;
+  max-width: 430px;
+  background: var(--gray-100);
+  border: none;
+  min-height: 90px;
+  padding: 5px;
+
+  &::placeholder {
+    font-size: 14px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: none;
+    width: 400px;
+  }
+}

@@ -1,4 +1,4 @@
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.scss v8.0.1 | MIT License | github.com/necolas/normalize.scss */
 
 /* Document
    ========================================================================== */
@@ -7,6 +7,12 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   line-height: 1.15; /* 1 */
@@ -37,9 +43,13 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+p {
+  margin-bottom: 10px;
 }
 
 /* Grouping content
