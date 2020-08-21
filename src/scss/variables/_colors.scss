@@ -1,0 +1,74 @@
+//basic colors
+$white: #fff;
+$black: #000;
+
+//brand colors:
+$brandColor: #173d66;
+$brandGray: #4a4a4a;
+
+:root {
+
+  // 50 SHADES OF GRAY :)
+  // Values from-through can be between 1 and 10 because of lighten percent value (min 1%, max 100%)
+  $minNumber: 1;
+  $maxNumber: 10;
+  $middleValue: floor(100 / $maxNumber); // number for middle color value
+
+  @for $i from $minNumber through $maxNumber {
+    $gray-colors: (
+      $i * $middleValue: lighten($black, $i * $middleValue)
+    );
+
+    // Custom variable values only support SassScript inside `#{}`.
+    @each $color, $value in $gray-colors {
+      --gray-#{$color}: #{$value};
+    }
+  }
+
+  //background colors
+  --main-background-color: #{$white};
+
+  //font colors
+  --main-font-color: #{$brandGray};
+  --main-font-color-reverse: #{$white};
+
+  //link colors
+  --link-color: #{$white};
+  --link-colorHAF: #e2e2e2; // color for HOVER, ACTIVE, FOCUS link
+
+  //border colors
+  --main-border-color: #{$white};
+  --main-border-color-reverse: #{$brandGray};
+
+  //button colors
+  --primary-background: #{$brandColor};
+  --primary-color: #{$white};
+  --primary-background-reverse: #{$white};
+  --primary-color-reverse: #{$brandColor};
+
+  //switch colors
+  --switch-color: #{$brandGray};
+
+  //scroll top link colors
+  --scroll-top: #{$brandColor};
+
+  //brand colors
+  --brand-color: #{$brandColor};
+  --brand-link-color: #{$brandGray};
+
+  //scrollbar colors
+  --scroll-bar-background: #{$brandColor};
+
+  //question mark colors
+  --q-mark-color: #{$brandColor};
+}
+
+//logo colors
+$cube-side-first-color: #272f3d;
+$minicube-first-color: #9C27B0;
+$minicube-second-color: #173d66;
+
+//logo sizes
+$cubesize: 18px !default;
+$cSize: $cubesize / 3;
+$delay: .06s;

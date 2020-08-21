@@ -1,0 +1,25 @@
+.o-info-section-images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 0 -50px;
+
+  @media (min-width: 768px) {
+    margin: 0 0 -80px;
+    z-index: 9;
+  }
+
+  img {
+    width: 100%;
+    margin: 0 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 9;
+
+    @media (min-width: 768px) {
+      max-width: 1200px;
+      max-height: 500px;
+    }
+  }
+}

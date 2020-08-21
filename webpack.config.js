@@ -10,8 +10,9 @@ module.exports = {
 
     //define output point
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: "bundle.js"
+        path: path.resolve(__dirname, 'dist/'),
+        filename: "bundle.js",
+        publicPath: '/',
     },
 
     plugins: [
@@ -38,7 +39,19 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                loader: 'style-loader!css-loader!sass-loader'
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'postcss-loader',
+                    'resolve-url-loader',
+                    'sass-loader'
+                ]
+            },
+            {
+                test: /\.(png|svg|jpg|gif|eot|ttf|woff|woff2)$/,
+                use: [
+                    'file-loader',
+                ]
             },
         ]
     },

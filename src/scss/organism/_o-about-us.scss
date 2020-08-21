@@ -1,0 +1,312 @@
+$cubesize: 450px;
+$cSize: $cubesize / 3;
+$delay: .06s;
+
+$cube-side-first-color: rgba(23, 61, 102, 0.4);
+$minicube-first-color: rgba(156, 39, 176, 0.5);
+$minicube-second-color: rgba(23, 61, 102, 0.5);
+
+.o-about-us {
+  position: relative;
+  display: flex;
+  min-height: 630px;
+  height: auto;
+  overflow: hidden;
+
+  @media (max-width: 991px) {
+
+    .l-layout-frame {
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    min-height: 780px;
+  }
+
+  @media (orientation:landscape) and (max-width: 1199px) {
+    min-height: 450px;
+  }
+
+  &-intro {
+    flex: 1 0 90%;
+    max-width: 90%;
+    padding: 35px;
+    margin: 60px auto 0 auto;
+    box-shadow: 0 0 35px var(--gray-basic);
+
+    small {
+      position: relative;
+      float: right;
+      width: 100%;
+      text-align: right;
+    }
+
+    h1 {
+      font-size: 42px;
+      color: var(--main-font-color);
+    }
+
+    p {
+      margin-top: 20px;
+    }
+
+    @media (min-width: 992px) {
+      flex: 1 0 70%;
+      max-width: 70%;
+      padding: 65px;
+      margin: 170px 0 auto;
+    }
+  }
+
+  &-logo {
+    position: absolute;
+    top: 0;
+    right: -50px;
+    transform: translateX(50%);
+
+    @media (min-width: 640px) {
+      right: 200px;
+    }
+
+    @media (min-width: 992px) {
+      top: 0;
+      right: 20%;
+      transform: initial;
+    }
+
+    @media (min-width: 1700px) {
+      right: 0;
+    }
+
+    .cube {
+      position: relative;
+      margin: 0 auto;
+      width: $cubesize;
+      height: $cubesize;
+      transform-style: preserve-3d;
+      transform: rotateX(55deg) rotateZ(45deg);
+
+      &-face {
+        position: absolute;
+        height: $cubesize;
+        width: $cubesize;
+        transform-style: preserve-3d;
+
+        &.front {
+          top: $cubesize;
+          transform-origin: top;
+          transform: rotateX(-90deg);
+        }
+
+        &.back {
+          transform-origin: top;
+          transform: rotateX(-90deg);
+        }
+
+        &.right {
+          left: $cubesize;
+          transform-origin: left;
+          transform: rotateY(90deg);
+        }
+
+        &.left {
+          transform-origin: left;
+          transform: rotateY(90deg);
+        }
+
+        &.bottom {
+          transform: translateZ(-$cubesize);
+        }
+
+        .square {
+          opacity: 0;
+          position: absolute;
+          height: $cSize;
+          width: $cSize;
+          background: $cube-side-first-color;
+          border: ceil($cSize/20) solid #000;
+          box-sizing: border-box;
+          transition: all $delay*4, opacity $delay;
+
+          &.visible {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.metal {
+
+        .top {
+
+          .square {
+            background: darken($cube-side-first-color, 15%);
+
+            &:first-child {
+              top: 0;
+              left: $cSize*2;
+            }
+            &:nth-child(2) {
+              top: 0;
+              left: $cSize;
+            }
+            &:nth-child(3) {
+              top: 0;
+              left: 0;
+            }
+            &:nth-child(4) {
+              top: $cSize;
+              left: 0;
+            }
+            &:last-child {
+              top: $cSize*2;
+              left: 0;
+            }
+          }
+        }
+
+        .front {
+
+          .square {
+            background: darken($cube-side-first-color, 10%);
+
+            &:first-child {
+              top: 0;
+              left: 0;
+            }
+            &:nth-child(2) {
+              top: $cSize;
+              left: 0;
+            }
+            &:nth-child(3) {
+              top: $cSize*2;
+              left: 0;
+            }
+            &:nth-child(4) {
+              top: $cSize*2;
+              left: $cSize;
+            }
+            &:last-child {
+              top: $cSize*2;
+              left: $cSize*2;
+            }
+          }
+        }
+
+        .right {
+
+          .square {
+            background: darken($cube-side-first-color, 5%);
+
+            &:first-child {
+              top: $cSize*2;
+              left: $cSize*2;
+            }
+            &:nth-child(2) {
+              top: $cSize;
+              left: $cSize*2;
+            }
+            &:nth-child(3) {
+              top: 0;
+              left: $cSize*2;
+            }
+            &:nth-child(4) {
+              top: 0;
+              left: $cSize;
+            }
+            &:nth-child(5) {
+              top: 0;
+              left: 0;
+            }
+            &:last-child {
+              top: $cSize;
+              left: 0;
+            }
+          }
+        }
+
+        .square {
+          border: 0;
+        }
+      }
+    }
+
+    .minicube {
+      position: absolute;
+      width: $cSize;
+      height: $cSize;
+      transform: translate3d($cubesize, $cubesize, 0);
+      transform-style: preserve-3d;
+      transform-origin: 0 0 0;
+
+      .square {
+        visibility: hidden;
+      }
+
+      &.transition {
+        transition: all $delay;
+      }
+
+      &-face {
+        position: absolute;
+        width: $cSize;
+        height: $cSize;
+        background: radial-gradient($minicube-first-color, transparent) center;
+        background-size: $cSize*2 $cSize*2;
+        border: 1px solid $minicube-first-color;
+        transform-style: preserve-3d;
+        box-sizing: border-box;
+
+        &.top {
+          transform: translate3d(0, 0, $cSize);
+        }
+
+        &.front {
+          transform-origin: bottom;
+          transform: rotateX(-90deg);
+        }
+
+        &.left {
+          transform-origin: left;
+          transform: rotateY(-90deg);
+        }
+
+        &.right {
+          transform-origin: right;
+          transform: rotateY(90deg);
+        }
+
+        &.back {
+          transform-origin: top;
+          transform: rotateX(90deg);
+        }
+      }
+    }
+
+    .cube {
+
+      &.metal {
+
+        .minicube-face {
+          border: 0;
+
+          &.bottom {
+            background: darken($minicube-second-color, 10%);
+          }
+
+          &.front {
+            background: rgba($minicube-first-color, .8);
+          }
+
+          &.left {
+            background: lighten($minicube-second-color, 10%);
+          }
+        }
+      }
+    }
+
+    .visible {
+      visibility: visible!important;
+    }
+  }
+}

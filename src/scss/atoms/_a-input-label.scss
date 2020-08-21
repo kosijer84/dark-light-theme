@@ -1,0 +1,15 @@
+label {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  text-align: left;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 14px;
+  letter-spacing: .6px;
+
+  @media (min-width: 1200px) {
+    max-width: none;
+    width: 400px;
+  }
+}

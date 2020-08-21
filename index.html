@@ -2,22 +2,137 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <title>Craftec website</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Craftec Solutions</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" href="/src/img/favicon.png" type="image/png" sizes="16x16">
 
-  <meta name="theme-color" content="#fafafa">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <meta name="theme-color" content="#534384">
 </head>
 
-<body>
+<body id="home">
 
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+<header>
+    <a id="cube" href="#about" class="m-logo-scrolling">
+        <div data-type="cube" class="cube metal">
+            <div data-type="top" class="cube-face top"></div>
+            <div data-type="front" class="cube-face front"></div>
+            <div data-type="right" class="cube-face right"></div>
+            <div class="cube-face back"></div>
+            <div class="cube-face left"></div>
+            <div class="cube-face bottom"></div>
+            <div data-type="minicube" class="minicube"></div>
+        </div>
+    </a>
+    <div class="l-layout-frame">
+        <nav class="o-nav">
+            <a href="/" class="o-nav-logo">
+                <div data-type="cube" class="cube metal">
+                    <div data-type="top" class="cube-face top"></div>
+                    <div data-type="front" class="cube-face front"></div>
+                    <div data-type="right" class="cube-face right"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face bottom"></div>
+                    <div data-type="minicube" class="minicube"></div>
+                </div>
+                <h4 class="o-nav-title">Craftec solutions</h4>
+            </a>
+            <div class="o-nav-menu">
+                <a href="#about">About us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="switch-title">
+                <label id="switch" class="switch">
+                    <input type="checkbox">
+                    <span></span>
+                </label>
+            </div>
+        </nav>
+    </div>
 
-  <p>test igore idemo da jedemsssso igore jos jednom</p>
+    <div id="about" class="o-about-us">
+        <div class="l-layout-frame">
+            <div class="o-about-us-intro">
+                <h1>Who we are<span class="a-q-mark">?</span></h1>
+                <h1>What we do<span class="a-q-mark">?</span></h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic
+                </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic
+                </p>
+                <small>Source: <a href="https://www.lipsum.com/">https://www.lipsum.com/</a></small>
+            </div>
+            <div id="large-logo" class="o-about-us-logo">
+                <div data-type="cube" class="cube metal">
+                    <div data-type="top" class="cube-face top"></div>
+                    <div data-type="front" class="cube-face front"></div>
+                    <div data-type="right" class="cube-face right"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face bottom"></div>
+                    <div data-type="minicube" class="minicube"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="l-layout-frame">
+    <div class="o-info-section-images">
+        <img src="src/img/office.jpg" alt="office">
+    </div>
+</section>
+
+<section id="contact" class="o-info-section">
+    <div class="l-layout-frame">
+        <h1>We are solution for <br> your web problems</h1>
+        <div class="o-contact-form-frame">
+            <div class="contact-info">
+                <h3>Contact us and schedule an appointment </h3>
+                <p><a target="_blank" href="tel:+38121123456">mob: 064123456</a></p>
+                <p><a target="_blank" href="mailto:office@craftec.rs">email: office@craftec.rs</a></p>
+                <p><a target="_blank" href="#">city: Novi Sad</a></p>
+            </div>
+            <form action="/" method="get">
+                <div class="m-input-frame">
+                    <label for="fname">First and last name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Ex: John Doe" required>
+                </div>
+                <div class="m-input-frame">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: email@email.com" required>
+                </div>
+                <div class="m-input-frame">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Ex: Type your message"></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="l-layout-frame">
+        <p>
+            <span>Craftec Solutions, </span><span id="year"></span>
+        </p>
+        <a href="https://rs.linkedin.com/company/craftec-solutions" target="_blank">Linkedin</a>
+    </div>
+</footer>
+
+<a href="#home" id="scroll-up" class="a-scroll-top">up</a>
 
 </body>
 
